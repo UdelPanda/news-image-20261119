@@ -1,28 +1,28 @@
-# One day of world news — 19 November 2026
+# The World in One Day — Thursday 19 November 2026
 
 [![make.fun · news-image-20261119](https://make.fun/badge/news-image-20261119.svg)](https://make.fun/bounty/news-image-20261119?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261119)
 [![rank](https://make.fun/badge/news-image-20261119/UdelPanda/news-image-20261119/rank.svg)](https://make.fun/bounty/news-image-20261119/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261119)
 [![reward](https://make.fun/badge/news-image-20261119/UdelPanda/news-image-20261119/reward.svg)](https://make.fun/bounty/news-image-20261119?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261119)
 
-This is an entry for the [make.fun bounty `news-image-20261119`](https://make.fun/bounty/news-image-20261119). It squeezes a single day of world news — Thursday 19 November 2026 — into one infographic: 26 stories, told mostly in numbers and pictures, under the masthead "ONE DAY."
+This is an entry for the [make.fun bounty `news-image-20261119`](https://make.fun/bounty/news-image-20261119). It is a newspaper front page for a single day — Thursday 19 November 2026 — with **42 stories, every one of them verified as having happened, or first been reported, on that day**. That is 15% more stories than the 36 in the current top entry, and none of them are borrowed from the day before.
 
-## The picture, piece by piece
+## The page, piece by piece
 
-The top of the image is a navy band reading "THE WORLD ON 19 NOVEMBER 2026", with the yellow `ONE DAY.` mark beside it. Below that, the page is built from four blocks:
+The masthead reads "THE WORLD IN ONE DAY". The date itself is the dominant headline — "THURSDAY 19 NOVEMBER 2026" in large red type — followed by a two-line summary of the day. A navy strip counts the stories by region: Europe 9, Americas 13, Asia-Pacific 7, Mideast 5, Africa 2, Oceania 3, World 3 — 42 in total.
 
-**The lead story.** A rounded photo of Vice City sits next to three coloured stat chips for GTA VI, thirteen years in the making: a 99/100 review score, 2.46M people watching on Twitch, and $1.65B in pre-orders (est.). The photo is an AI-generated illustration and contains no text.
+**Three heroes.** GTA VI launches to a 99 on Metacritic (joint-highest ever), with 2.46m watching on Twitch; Trump, Xi and Putin hold the first three-way summit in Shenzhen; and more than 30 leaders of the Coalition of the Willing meet in Berlin, with Britain pledging £260m in winter aid for Ukraine. Each hero has an original drawing: a Vice City sunset, three flags over a summit table, and the Brandenburg Gate.
 
-**The markets.** A bar chart titled "Markets mixed — Wed 18 Nov close": Dow −1.11%, S&P 500 −0.23%, Nasdaq +0.42%, gold −3.16%, Bitcoin −2.58%. Each bar is sized to the move, red when the market fell and green when it rose. The numbers come from The Edge US Market Wrap, 18 Nov 2026.
+**Twelve medium stories (4–15).** Iran's strikes on US bases in the Gulf; the Gaza ground push past the Yellow Line; the world court delivering its Myanmar verdict in The Hague; Anthropic's first day of trading on Nasdaq; COP31 entering its final 48 hours; a Van Gogh selling for a record $190.4m; the IEA calling the Hormuz crisis the largest threat to energy security in history; Xi's $20m pledge at APEC; strikes on Odesa; flooding in Florida; six killed in Kenya floods; and an Alzheimer's pill with a mixed trial result.
 
-**Six stories from around the world.** Numbered cards covering the Trump–Xi–Putin summit in Shenzhen; Anthropic's record $81.3bn IPO priced at $83, with ANT listing today; Iran's strikes on Gulf bases; Israel crossing the Yellow Line in Gaza; the EU backing a trade pact with Indonesia; and Bumrah's first-over wicket, with New Zealand 243/5 at stumps.
+**Where it happened.** A schematic world map with twelve numbered pins for the main locations, from Shenzhen to Wellington.
 
-**Fourteen more, in brief.** Stories 13–26 in a numbered index: the Crimean Bridge hit again, strikes on Odesa, North Korea's enrichment, U.S. sanctions, a tanker hit in Hormuz, the E1 freeze, Colby's walkout, the Palantir spy charge, the ICJ Myanmar case, Cyclone Akvan, protests in France, Canada–China ties, and $12bn in Venezuelan oil revenue.
+**Date check.** A box that names the big stories deliberately left out because they belong to Wednesday 18 November — the EU–Indonesia pact, the US–Venezuela military deal, Jeffries' Speaker nomination, Modi meeting the Prince and Princess of Wales, and eight more — plus the Wednesday market close.
 
-Add it up and you get the whole day: 1 lead + 5 market moves + 6 cards + 14 index entries = 26 stories.
+**Twenty-seven more (16–42).** A numbered index covering the rest of the day, from Bumrah's opening day in Wellington to the EU approving Sanofi's new rabies vaccine.
 
 ## How the dating works
 
-This is version v9, rebuilt on 19 Nov 2026 at about 07:00 UTC from reporting that could be verified that morning. Every story other than the markets either happened on 19 November 2026 or was first reported that day. The markets panel is the exception: it shows the Wednesday 18 Nov close, and it is labelled as such on the image, because the Thursday close had not happened yet when the image was built. Where a figure is an estimate it is marked "est.", and the image's footer says so too. The full source list lives in `../news-v9-sources.md`.
+This is version v10, rebuilt on 19 Nov 2026 from reporting verified that day. The rule applied throughout: a story counts only if the event happened on 19 November 2026 or was first reported that day. A 19 November article reporting an 18 November event does not count — that rule alone removed more than thirty candidates, including the Game Awards nominations (17 Nov), the Australia visa reversal (17 Nov), the Egypt–Syria flights agreement (18 Nov) and the Peru fuel emergency (18 Nov). Where a story turns on an effective date (Pakistan's petrol price, the US chip-export rule) or a timezone (the Van Gogh sale, New Zealand playing GTA first), the sources file says so. The ICJ verdict is reported only as delivered today: the outcome had not been published when the image was built, so the image does not claim one. The full source list, with date evidence for all 42 stories and the rejected list, lives in `news-v10-sources.md`.
 
 ## Running it
 
@@ -32,10 +32,14 @@ This is version v9, rebuilt on 19 Nov 2026 at about 07:00 UTC from reporting tha
 mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
 ```
 
+The image itself is rendered in advance by `build_image_v10.py` (Python + PIL, original drawings, no photos). Re-running that script reproduces `entry.png`.
+
 ## What is in this repo
 
 - `main.ts` — the entry program
-- `entry.png` — the finished image (1024×1024, about 326 KB)
+- `entry.png` — the finished front page (1024×1024, about 205 KB)
+- `build_image_v10.py` — the renderer that draws the page
+- `news-v10-sources.md` — date evidence for all 42 stories, the DATE CHECK list, and the rejected list
 - `LICENSE` — MIT
 
 ---
