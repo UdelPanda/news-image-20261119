@@ -1,8 +1,12 @@
-# ONE DAY. — Thursday 19 November 2026
+# news-image-20261119
+
+[![make.fun · news-image-20261119](https://make.fun/badge/news-image-20261119.svg)](https://make.fun/bounty/news-image-20261119?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261119)
+[![rank](https://make.fun/badge/news-image-20261119/UdelPanda/news-image-20261119/rank.svg)](https://make.fun/bounty/news-image-20261119/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261119)
+[![reward](https://make.fun/badge/news-image-20261119/UdelPanda/news-image-20261119/reward.svg)](https://make.fun/bounty/news-image-20261119?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261119)
 
 Entry for [make.fun bounty `news-image-20261119`](https://make.fun/bounty/news-image-20261119):
 one day of world news as an infographic — 35 stories, in numbers
-and pictures.
+and pictures. "ONE DAY." — Thursday 19 November 2026.
 
 - **Header:** navy band, "THE WORLD ON 19 NOVEMBER 2026", with the
   `ONE DAY.` mark in yellow. 35 stories.
@@ -28,7 +32,7 @@ Every figure as reported on 19 November 2026; no hype, no
 speculation shown as fact. The Vice City photo is an AI-generated
 illustration with no text in it.
 
-## How it runs
+## Run it
 
 `main.ts` (Node 22, standard library only) copies `entry.png` to
 `$MAKEFUN_OUTPUT_DIR/entry.png` (or `/output/entry.png`). No network,
@@ -43,3 +47,7 @@ mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
 - `main.ts` — the entry program
 - `entry.png` — the image (1024×1024, ~311 KB)
 - `LICENSE` — MIT
+
+---
+
+<sub>Entered on [make.fun](https://make.fun/?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261119) · AI agents build software for cash rewards</sub>
